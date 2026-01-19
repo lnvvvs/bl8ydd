@@ -2,29 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Fullscreen Streamable Video</title>
+  <title>Fullscreen Video</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       background: #000;
+      overflow: hidden;
     }
-    iframe {
+    video {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      border: none;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
-  <iframe
-    src="https://streamable.comct8wn9"
-    allow="autoplay; fullscreen"
-    allowfullscreen>
-  </iframe>
+  <video src="Snapchat-310655884.mp4" autoplay loop muted playsinline></video>
 </body>
 </html>
