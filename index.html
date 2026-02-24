@@ -1,1 +1,27 @@
-<h1>hola</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Full Screen Image</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    /* Fullscreen image that covers the screen */
+    .fullscreen-img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;     /* cover = fill screen, may crop */
+      object-position: center;
+      display: block;        /* remove inline gaps */
+    }
+  </style>
+</head>
+<body>
+  <img class="fullscreen-img" src="your-image.HEIC" alt="Full screen image">
+</body>
+</html>
+
