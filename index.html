@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RepForge</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -50,14 +52,8 @@
     }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .logo {
@@ -93,8 +89,8 @@
 
     .buttons {
       display: flex;
-      gap: 20px;
       justify-content: center;
+      gap: 20px;
       flex-wrap: wrap;
       margin-bottom: 70px;
     }
@@ -104,8 +100,11 @@
       border-radius: 18px;
       font-size: 1rem;
       font-weight: 700;
-      text-decoration: none;
+      border: none;
+      cursor: pointer;
       transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .primary {
@@ -126,75 +125,22 @@
       backdrop-filter: blur(10px);
     }
 
-    .secondary:hover {
-      background: white;
-      color: black;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 28px;
-      padding: 35px;
-      transition: all 0.4s ease;
-      backdrop-filter: blur(12px);
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255,0,0,0.5);
-      box-shadow: 0 10px 35px rgba(255,0,0,0.18);
-    }
-
-    .card-icon {
-      font-size: 3rem;
-      margin-bottom: 15px;
-    }
-
-    .card h2 {
-      margin-bottom: 12px;
-      font-size: 1.5rem;
-    }
-
-    .card p {
-      color: #b0b0b0;
-      line-height: 1.6;
-    }
-
     footer {
-      margin-top: 80px;
+      text-align: center;
       color: #666;
-      font-size: 0.95rem;
-    }
-
-    @media(max-width: 768px) {
-      h1 {
-        font-size: 3.2rem;
-      }
-
-      .subtitle {
-        font-size: 1.05rem;
-      }
-
-      .logo {
-        width: 200px;
-      }
+      font-size: 0.9rem;
+      margin-top: 50px;
     }
   </style>
 </head>
+
 <body>
   <div class="bg-glow"></div>
 
   <div class="container">
     <div class="hero">
-      <img src="logo.png" alt="RepForge Logo" class="logo">
+
+      <img src="logo.png" class="logo" alt="RepForge Logo"/>
 
       <h1>REP<span>FORGE</span></h1>
 
@@ -203,9 +149,18 @@
       </p>
 
       <div class="buttons">
-        <a href="app.apk" class="btn primary">Download Android APK</a>
+        <!-- IMPORTANT: this hits your backend, not Gofile directly -->
+        <a href="/download" class="btn primary">
+          Download Android APK
+        </a>
       </div>
+
+      <footer>
+        © 2026 RepForge. All rights reserved.
+      </footer>
+
     </div>
   </div>
+
 </body>
 </html>
