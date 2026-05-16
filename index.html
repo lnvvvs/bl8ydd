@@ -90,9 +90,6 @@
     .buttons {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 70px;
     }
 
     .btn {
@@ -100,11 +97,10 @@
       border-radius: 18px;
       font-size: 1rem;
       font-weight: 700;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
       text-decoration: none;
+      transition: all 0.3s ease;
       display: inline-block;
+      cursor: pointer;
     }
 
     .primary {
@@ -116,20 +112,6 @@
     .primary:hover {
       transform: translateY(-4px) scale(1.03);
       box-shadow: 0 15px 35px rgba(255,0,0,0.5);
-    }
-
-    .secondary {
-      border: 1px solid #444;
-      color: white;
-      background: rgba(255,255,255,0.03);
-      backdrop-filter: blur(10px);
-    }
-
-    footer {
-      text-align: center;
-      color: #666;
-      font-size: 0.9rem;
-      margin-top: 50px;
     }
   </style>
 </head>
@@ -149,15 +131,13 @@
       </p>
 
       <div class="buttons">
-        <!-- IMPORTANT: this hits your backend, not Gofile directly -->
-        <a href="/download" class="btn primary">
+        <a 
+          href="https://github.com/lnvvvs/bl8ydd/releases/download/v.1.0.0/app.apk"
+          class="btn primary"
+        >
           Download Android APK
         </a>
       </div>
-
-      <footer>
-        © 2026 RepForge. All rights reserved.
-      </footer>
 
     </div>
   </div>
